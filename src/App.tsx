@@ -1,34 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { ActionPalette } from './components/ActionPalette'
+import { ParticleField } from './components/ParticleField'
+import { CursorOverlay } from './components/CursorOverlay'
+import { ControlPanel } from './components/ControlPanel'
+import { CursorTelemetry } from './components/CursorTelemetry'
+import { FooterLinks } from './components/FooterLinks'
+import { HeroSurface } from './components/HeroSurface'
+import { InteractiveGrid } from './components/InteractiveGrid'
+import { OrbitalSwarm } from './components/OrbitalSwarm'
+import { DepthGallery } from './components/DepthGallery'
+import { ResonanceField } from './components/ResonanceField'
+import { TimelineStrip } from './components/TimelineStrip'
+import { VelocityWave } from './components/VelocityWave'
+import { SignalMatrix } from './components/SignalMatrix'
+import { CursorEventAtlas } from './components/CursorEventAtlas'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app-shell">
+      <ParticleField />
+      <CursorOverlay />
+      <HeroSurface />
+      <ResonanceField />
+      <OrbitalSwarm />
+      <DepthGallery />
+      <CursorEventAtlas />
+      <div className="data-panels">
+        <CursorTelemetry />
+        <VelocityWave />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <SignalMatrix />
+      <InteractiveGrid />
+      <TimelineStrip />
+      <ActionPalette />
+      <ControlPanel />
+      <FooterLinks />
+    </div>
   )
 }
 
