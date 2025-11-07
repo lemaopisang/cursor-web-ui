@@ -7,6 +7,8 @@ go to terminal and do these commands:
 npm install
 npm run dev
 npm run build
-npm run preview and go the localhost address that u got
+npm run preview
+```
 
-tell me if bug lol
+then u enter the adress that u got
+should be done after dat :)
